@@ -18,26 +18,18 @@ function safeSum(a, b, c) {
 // do not use Math.max
 function max(a, b, c) {
   let m = a;
-  if (m > b && m > c) {
-    return m;
-  } else if (b > m && b > c) {
-    return b;
-  } else {
-    return c;
-  }
+  if (b > m) m = b;
+  if (c > m) m = c;
+  return m;
 }
 
 //return minimum of given arguments
 // do not use Math.min
 function min(a, b, c) {
   let m = a;
-  if (m < b && m < c) {
-    return m;
-  } else if (b < m && b < c) {
-    return b;
-  } else {
-    return c;
-  }
+  if (b < m) m = b;
+  if (c < m) m = c;
+  return m;
 }
 
 // return true if given number is integer
